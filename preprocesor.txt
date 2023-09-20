@@ -1,0 +1,50 @@
+1) #include "C:\\borland\includes\plik_nagłówkowy.h"
+- nawiasy ostre katalog kompilatora
+- cudzysłów katalog pliku lub można podać scieżke
+
+2) #define
+makro które będzie potem podmienione w kodzie programu na odpowiednią wartość
+#define SIX 1+5
+#define NINE 8+1
+printf("%d * %d = %d\n", SIX, NINE, SIX * NINE); // 1+5*8+1
+
+3) #undef STALA odwołuje definicję wykonaną instrukcją #define.
+
+4) #if #elif #else #endif
+#if INSTRUKCJE == 2
+  printf ("Podaj liczbę z przedziału 10 do 0\n"); /*1*/
+#elif INSTRUKCJE == 1
+  printf ("Podaj liczbę: "); /*2*/
+#else
+  printf ("Podaj parametr: "); /*3*/
+#endif
+scanf ("%d", &liczba); /*4*/
+
+5) redefine/ header guard
+#ifdef PI
+#undef PI
+#endif
+
+#ifndef MATHEMATICS_H
+#define MATHEMATICS_H
+#include "pentagon.h"
+#endif
+
+#ifndef SQUARE_H
+#define SQUARE_H
+
+int getSquareSides()
+{
+    return 4;
+}
+
+#endif
+
+6) #error - przerwanie kompilacji i wyświetlenie tekstu, który znajduje się za tą instrukcją
+#ifdef BLAD
+#error Poważny błąd kompilacji
+#endif
+
+6a) #warning
+
+7) #pragma directive provides a way to request special behavior from the compiler. 
