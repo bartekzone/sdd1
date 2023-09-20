@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define ARRSIZE 10
+long sumajw(int *poczatek, int *koniec); //notacja wskaznikowa tab[n] i *(tab + n) sa rownowazne
+
+int main()
+{
+    int kulki[ARRSIZE] = {20,10,5,39,4,16,19,26,31,20};
+    long wynik;
+    wynik = sumajw(kulki, kulki + ARRSIZE);
+    printf("Suma kulek wynosi %ld\n", wynik);
+    return 0;
+}
+
+long sumaj(int *poczatek, int *koniec)
+{
+    int suma = 0;
+    
+    //podejscie wskaznikowe
+    while(poczatek < koniec)
+    {
+        suma += *poczatek; //dodaje wartosc do sumy
+        poczatek++; //przenosi wskaznik do nastepnego elemenetu int
+    }
+    return suma;
+}

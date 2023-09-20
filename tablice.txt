@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#define ROZMIAR 3
+
+
+
+int main()
+{
+    int tab[ROZMIAR] = {2,3,4};
+    
+    for(int i=0;i<ROZMIAR;i++)
+    {
+        printf("Element tablic nr: %d ma wartosc: %d\n", i,tab[i]);
+    }
+    
+    char znaki[ROZMIAR] = {'T','A','K'};
+    
+    for (int i=0;i<sizeof(znaki)/sizeof(char);i++){
+        printf("Element tablic nr: %d ma wartosc: %c\n", i,znaki[i]);
+    }
+    
+    char string[11] = "Merkkijono";
+    
+    for(int i=0;i<sizeof(string)/sizeof(char);i++){
+        printf("Element tablic nr: %d ma wartosc: %c\n", i,string[i]);
+    }
+    
+    printf("The end");
+
+    return 0;
+}
+
+
+SIZE_T
+size_t is an unsigned type. 
+So, it cannot represent any negative values(<0). 
+You use it when you are counting something, and are sure that it cannot be negative. 
+ for (size_t n = 0; n < N; ++n) {
+        a[n] = n;

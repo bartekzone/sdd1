@@ -1,0 +1,31 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    zad6. wyswietlanie adresu samego wskaznika &wsk
+    wsk - wyswietlanie adresu na ktory wskazuje wskaznika
+    *wsk - wyswietlenie wartosci na ktora wskazuje wskaznik
+    
+     siatka[22][56] - &siatka[22][56] - adres elementu 
+     siatka[22][0] - 1)siatka[22]
+                    2) &siatka[22][0]
+     siatka[0][0] - 1) &siatka[0]
+                    2) &siatka[0][0]
+                    3) (int *)siatka // rzutowanie do int
+                    
+    zad7. 
+    a) cyfry jest tablicą dziesięciu liczb całkowitych --- int cyfry[10]
+    b) oplaty jest tablicą sześciu liczb zmiennoprzecinkowych (float) --- float oplaty[6]
+    c) mat jest tablicą trzech tablic zawierających po pięć liczb całkowitych --- int mat[3][5]
+    d) wlanc jest wskaźnikiem do tablicy 20 znaków char (*wlanc)[20]
+    e) twz jest tablicą 20 wskaźników do char char *(twz[20])
+    return 0;
+}

@@ -1,0 +1,36 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+void func_var(int zmienna)
+{
+    zmienna = 4;
+}
+
+void func_pointer (int *zmienna)
+ {
+   *zmienna = 5;
+ }
+int main()
+{
+    int z = 3;
+    printf("z =%d\n", z);
+    
+    func_var(z);
+    printf("z =%d\n", z);
+    
+    func_pointer(&z);
+    printf("z =%d\n", z);
+    
+    int tablicaInt[3] ={0,1,2};
+    func_pointer(&tablicaInt[1]);//wypisuje adres
+    printf("tab =%d\n", tablicaInt[1]);
+    
+    return 0;
+}

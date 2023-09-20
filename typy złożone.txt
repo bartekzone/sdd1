@@ -1,0 +1,106 @@
+https://pl.wikibooks.org/wiki/C/Typy_z%C5%82o%C5%BCone#Wsp.C3.B3lne_w.C5.82asno.C5.9Bci_typ.C3.B3w_wyliczeniowych.2C_unii_i_struktur
+
+Definiowanie typów pochodnych:
+typedef stara_nazwa  nowa_nazwa;
+typedef int mojInt;
+
+STRUKTURA
+struktura - może przechowywać wiele zmiennych, różnych typów
+struct Przykład {
+	int pole1;
+	int pole2;
+} 
+
+użycie: struct Przyklad pierwszaStruktura;
+	pierwszaStruktura.pole1 = 4;
+
+lub definicja:
+struct mystruct {
+    int int_member;
+    double double_member;
+    char string_member[25];
+} struct_var;
+
+struct_var.int_member = 3;
+
+lub inicjacja od razu:
+struct moja_struct {
+    int a;
+    char b;
+    } moja = {1,'c'};
+
+WSKAŹNIK do struktury
+struct student{
+    char *name;
+    int class;
+    int Age;
+    float percentage;
+};
+
+int main()
+{
+    struct student S1;
+    S1.Age = 11;
+    printf("Wiek to %d \n", S1.Age);
+    struct student *pointer1;
+    pointer1 = &S1;
+    pointer1->Age = 12;
+    printf("Wiek to %d\n", S1.Age);
+    //student *pointer2 = &S2;
+
+    return 0;
+}
+
+
+ENUM
+enum - typ wyliczeniowy
+enum Kierunek {W_GORE, W_DOL, W_LEWO, W_PRAWO};
+   
+enum Kierunek ruch = W_GORE;
+#include <stdio.h>
+typedef double nowa_nazwa;
+typedef int mojInt;
+enum Kierunek {W_GORE, W_DOL, W_LEWO, W_PRAWO};
+
+
+int main()
+{
+       
+    enum Kierunek ruch = W_GORE;
+    printf("Wartosc ruch: %d \n", ruch);
+    switch(ruch)
+    {
+    case W_GORE:
+        printf("Jedziemy w gore");
+    break;
+    case W_DOL:
+        printf("Jedziemy w dol");
+    break;
+    
+    default:
+        printf("W kosmos");
+    
+    }
+    return 0;
+}
+
+UNIE
+unie - to typ złoznych danych zawierajacych rozne typy danych, jednak pole nakładaja się na siebie i można wykorzystac tylko jedno
+rozmiar unii to rozmiar największego typu danych
+union LiczbaLubZnak {
+   int calkowita;
+   char znak;
+   double rzeczywista;
+ };
+union LiczbaLubZnak liczba;
+ liczba.calkowita = 10;
+ printf("%d\n", liczba.calkowita);
+
+POLA BITOWE
+pojemnik na dane mogący mieć rozmiar nawet 1bit-u, oszczędzanie danych
+struct moja {
+   unsigned int a1:4, /* 4 bity */
+                a2:8, /* 8 bitów (często 1 bajt) */ 
+                a3:1, /* 1 bit */
+                a4:3; /* 3 bity */
+ };

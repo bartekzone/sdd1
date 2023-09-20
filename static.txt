@@ -1,0 +1,6 @@
+- static zastosowane dla zmiennej globalnej - jest ona wtedy widoczna tylko w jednym pliku
+- static zastosowane dla zmienne lokalnej - wartość zmiennej zostanie zachowana po wykonaniu 
+jej wartość się nie zmieni przy ponownym wywołaniu funkcj (deklaracja static int zmienna = 0;)
+
+extern- linkujemy zmienne globalne zadeklarowane w innych plikach, informujemy w ten sposób kompilator, żeby nie szukał jej w aktualnym pliku.
+#include "innyPlik.c"

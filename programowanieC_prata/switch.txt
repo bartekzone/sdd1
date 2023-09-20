@@ -1,0 +1,38 @@
+#include <stdio.h>
+void powitanie();
+
+int main()
+{
+    int wybor;
+    
+    powitanie();
+    while((wybor = getchar()) != 'q')
+    {
+      switch(wybor)
+      {
+        case 'a' : printf("Dodawanie mode\n");
+            break;
+        case 'b' : printf("Odejmowanie mode\n");
+            break;
+        case '3' : printf("Mnozenie mode\n");
+            break;
+        case '4' : printf("Dzielenie mode\n");
+            break;
+        case '\n': break;
+        default:
+            printf("Sprobuj jeszcze raz\n");
+            break;
+      }
+    powitanie();
+    }
+
+    return 0;
+}
+
+void powitanie()
+{
+    printf("Wybierz działanie:\n");
+    printf("a- dodawanie\t b- odejmowanie\n");
+    printf("3- mnozenie\t 4- dzielenie\n");
+    printf("q - koniec programu\n");
+}

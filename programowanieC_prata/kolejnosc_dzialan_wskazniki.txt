@@ -1,0 +1,24 @@
+#include <stdio.h>
+int dane[2] = {100, 200};
+int wiecejdanych[2] = {300,400};
+
+int main()
+{
+    int *w1,*w2, *w3;
+    w1= w2= dane; //ustawiamy na poczatek tablicy dane
+    w3 = wiecejdanych; //ustawiamy na poczatek tablicy wiecejdanych
+    
+    printf("*w1=%d, *w2=%d, *w3=%d \n", *w1, *w2, *w3);
+    
+    //logika zwiekszanie wskaznikow * i ++ maja ten sam prirytet wykonanie prawo->lewo
+    printf("*w1++=%d, *++w2=%d, (*w3)++=%d \n", 
+                *w1++, *++w2, (*w3)++);
+    
+    // sprawdzamy co spowodowala inkrementacja            
+    printf("*w1=%d zwiekszylismy adres po wykonaniu i pokazlismy wartosc \n", *w1); 
+    printf("*w2=%d zwiekszylismy adres przed wykonaniem i pokazlismy wartosc\n", *w2);
+    printf("*w3=%d zwiekszylismy wartosc po wykonaniu o jeden int\n", *w3);
+    
+    
+    return 0;
+}

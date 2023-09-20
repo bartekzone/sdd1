@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define DEF "Jestem zdefiniowanym lancuchem."
+// puts wyswietla łancuch, przekazujemy adres 
+// koniec znak zerowy
+int main()
+{
+    char lan1[80] = "Przypisano mnie tablicy.";
+    char *lan2 = "Przypisano mnie wskaznikowi";
+    puts(DEF);
+    puts(lan1);
+    puts(lan2);
+    puts(&lan1[5]);
+    puts(lan2+4);
+
+    return 0;
+}

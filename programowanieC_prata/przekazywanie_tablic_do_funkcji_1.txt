@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define ARRSIZE 10
+long sumaj(int tab[], int n);//notacja tablicowa
+
+
+int main()
+{
+    int kulki[ARRSIZE] = {20,10,5,39,4,16,19,26,31,20};
+    long wynik;
+    wynik = sumaj(kulki, ARRSIZE);
+    printf("Suma kulek wynosi %ld\n", wynik);
+    printf("Rozmiar tablicy wynosi %ld bajtow\n", sizeof kulki);
+
+    return 0;
+}
+
+long sumaj(int tab[], int n)
+{
+    int i;
+    int suma = 0;
+    
+    for(i=0; i<n; i++)
+        suma += tab[i];
+    printf("Rozmiar tablicy wynosi %ld bajtow\n", sizeof tab);
+    return suma;
+}

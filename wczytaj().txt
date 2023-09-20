@@ -1,0 +1,34 @@
+// gets(), fgets() gets_s() - jesli element miesci sie w buforze wszystkie dzialaja ok
+// fgets() pobiera znak nowego wiesza trzeba go usuwac w razie potrzeby
+//przepelnienie
+//gets() trzeba pamietac o ilosci pobieranych elementow
+//gets_s() - okreslamy max elementow do wczytania ale obsluga bledow do przypadku niepowodzenia, pomija znak nowej lini
+// fgets zwraca NULL jesli EOF, jesli nie wskaznik do elementu , okreslamy max elementow, nie przerywa programu w przypdku bledu
+#include <stdio.h>
+char *wczytaj(char *z, int ile);
+
+int main()
+{
+    printf("Hello World");
+
+    return 0;
+}
+
+char *wczytaj(char *z, int ile)
+{
+    char *wynik;
+    int i=0;
+    wynik = fgets(z, ile, stdin); //powinno zwrocic wskaznik, NULL jesli blad lub EOF
+    if (wynik != NULL)
+    {
+        while (z[i] != '\n' && z[i] != '\0')
+            i++ ;// pomija rozne od new line i empty
+        if (z[i] == '\n')
+            z[i] = '\0'; // znak nowego wiersza -> znak pust
+        else // z[i] == '\0'
+             while (getchar() != '\n') 
+                continue; // jesli nie dojedziemy do konca, kolejne wywołanie fgets rozpocznie sie od tego miejsca
+		//porzadkowanie wejscia z klawiatury
+			
+    }
+}
