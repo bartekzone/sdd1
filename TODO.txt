@@ -1,0 +1,11 @@
+1. napisy
+https://pl.wikibooks.org/wiki/C/Napisy
+2. preprocesor
+https://pl.wikibooks.org/wiki/C/Preprocesor
+https://pl.wikibooks.org/wiki/C/Preprocesor/Przyk%C5%82ad_dzia%C5%82ania
+3. malloc
+https://pl.wikibooks.org/wiki/C/malloc
+https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/
+
+Powtórka wskaźniki, pola bitowe zastosowania
+zrobić szkolenie z git
