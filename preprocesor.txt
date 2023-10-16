@@ -1,3 +1,4 @@
+**/// file about preprocesor
 1) #include "C:\\borland\includes\plik_nagłówkowy.h"
 - nawiasy ostre katalog kompilatora
 - cudzysłów katalog pliku lub można podać scieżke
